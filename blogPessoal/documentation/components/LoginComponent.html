@@ -381,7 +381,11 @@ export class LoginComponent implements OnInit {
   entrar() {
     this.authService.logar(this.userLogin).subscribe((resp: UserLogin) &#x3D;&gt; {
       this.userLogin &#x3D; resp
+<<<<<<< HEAD
       localStorage.setItem(&#x27;token&#x27;, this.userLogin.token)
+=======
+      environment.token &#x3D; this.userLogin.token
+>>>>>>> ae8da6a2d9ec0c76781b9b209d70a5bba93d0cd5
       this.router.navigate([&#x27;/feed&#x27;])
     })
   }

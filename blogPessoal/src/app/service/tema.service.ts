@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
 import { Tema } from '../model/Tema';
 
 @Injectable({
@@ -9,7 +10,7 @@ export class TemaService {
 
   constructor(private http : HttpClient) { }
   token = {
-    headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
+    headers: new HttpHeaders().set('Authorization', environment.token)
   }
   getAllTemas() {
     return this.http.get('http://localhost:8080/tema', this.token)
@@ -25,7 +26,7 @@ export class TemaService {
   }
 
   deleteTema(id: number) {
-    return this.http.delete(`http://localhost:8080/tema/${id}`, this.token)
+    return this.http.delete(`http://localhost:8080tema/${id}`, this.token)
   }
 
   getByNomeTema(nome: string) {

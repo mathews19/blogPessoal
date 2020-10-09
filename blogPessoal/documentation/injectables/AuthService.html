@@ -175,8 +175,13 @@
 
             <tr>
                 <td class="col-md-4">
+<<<<<<< HEAD
                     <div class="io-line">Defined in <a href="" data-line="33"
                             class="link-to-prism">src/app/service/auth.service.ts:33</a></div>
+=======
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/app/service/auth.service.ts:29</a></div>
+>>>>>>> ae8da6a2d9ec0c76781b9b209d70a5bba93d0cd5
                 </td>
             </tr>
 
@@ -214,8 +219,13 @@
 
             <tr>
                 <td class="col-md-4">
+<<<<<<< HEAD
                     <div class="io-line">Defined in <a href="" data-line="22"
                             class="link-to-prism">src/app/service/auth.service.ts:22</a></div>
+=======
+                    <div class="io-line">Defined in <a href="" data-line="20"
+                            class="link-to-prism">src/app/service/auth.service.ts:20</a></div>
+>>>>>>> ae8da6a2d9ec0c76781b9b209d70a5bba93d0cd5
                 </td>
             </tr>
 
@@ -253,8 +263,13 @@
 
             <tr>
                 <td class="col-md-4">
+<<<<<<< HEAD
                     <div class="io-line">Defined in <a href="" data-line="18"
                             class="link-to-prism">src/app/service/auth.service.ts:18</a></div>
+=======
+                    <div class="io-line">Defined in <a href="" data-line="16"
+                            class="link-to-prism">src/app/service/auth.service.ts:16</a></div>
+>>>>>>> ae8da6a2d9ec0c76781b9b209d70a5bba93d0cd5
                 </td>
             </tr>
 
@@ -323,8 +338,13 @@
 
             <tr>
                 <td class="col-md-4">
+<<<<<<< HEAD
                     <div class="io-line">Defined in <a href="" data-line="14"
                             class="link-to-prism">src/app/service/auth.service.ts:14</a></div>
+=======
+                    <div class="io-line">Defined in <a href="" data-line="13"
+                            class="link-to-prism">src/app/service/auth.service.ts:13</a></div>
+>>>>>>> ae8da6a2d9ec0c76781b9b209d70a5bba93d0cd5
                 </td>
             </tr>
 
@@ -379,7 +399,11 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { UserLogin } from &#x27;./../model/UserLogin&#x27;;
 import { Injectable } from &#x27;@angular/core&#x27;;
+<<<<<<< HEAD
 import { HttpClient } from &#x27;@angular/common/http&#x27;;
+=======
+import {HttpClient} from &#x27;@angular/common/http&#x27;;
+>>>>>>> ae8da6a2d9ec0c76781b9b209d70a5bba93d0cd5
 import { User } from &#x27;../model/User&#x27;;
 import { environment } from &#x27;src/environments/environment.prod&#x27;;
 
@@ -388,6 +412,7 @@ import { environment } from &#x27;src/environments/environment.prod&#x27;;
 })
 export class AuthService {
 
+<<<<<<< HEAD
   constructor(private http: HttpClient) { }
 
   logar(userLogin: UserLogin) {
@@ -396,6 +421,14 @@ export class AuthService {
 
   cadastrar(user: User) {
     return this.http.post(&#x27;http://localhost:8080/usuarios/cadastrar&#x27;, user)
+=======
+  constructor( private http: HttpClient) { }
+  logar(userLogin: UserLogin) {
+    return this.http.post(&#x27;http://localhost:9000/usuarios/logar&#x27;, userLogin)
+  }
+  cadastrar(user: User) {
+    return this.http.post(&#x27;http://localhost:9000/usuarios/cadastrar&#x27;, user)
+>>>>>>> ae8da6a2d9ec0c76781b9b209d70a5bba93d0cd5
   }
 
   btnSair(){
@@ -405,6 +438,7 @@ export class AuthService {
     if (token !&#x3D; &#x27;&#x27;) {
       ok &#x3D; true
     }
+<<<<<<< HEAD
 
     return ok
   }
@@ -421,6 +455,23 @@ export class AuthService {
   }
 
 }</code></pre>
+=======
+    return ok
+  }
+    btnLogin() {
+      let ok &#x3D; false
+      let token &#x3D; environment.token
+  
+      if (token &#x3D;&#x3D; null) {
+        ok &#x3D; true
+      }
+  
+      return ok
+    }
+  
+}
+</code></pre>
+>>>>>>> ae8da6a2d9ec0c76781b9b209d70a5bba93d0cd5
     </div>
 
 </div>

@@ -30,6 +30,7 @@ export class AuthService {
     return ok
   }
 
+
   btnLogin() {
     let ok = false
     let token = environment.token

@@ -37,9 +37,8 @@ export class AuthService {
 
     if (token == '') {
       ok = true
-    }
 
     return ok
   }
-
+  }
 }

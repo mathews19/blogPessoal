@@ -20,6 +20,7 @@ import { DeletePostagemComponent } from './delete-postagem/delete-postagem.compo
 import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 import { AlertasComponent } from './alertas/alertas.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,11 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     OrderModule,
     ModalModule.forRoot() 
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy
+
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
